@@ -1,0 +1,10 @@
+- name: Export Bucket Name
+  command: export bucket_name= {{ bucket_name }}
+
+
+- name: Export Cluster Name
+  command: export KOPS_CLUSTER_NAME= {{ cluster_name }}
+
+
+- name: Export State Store
+  command: export KOPS_STATE_STORE= {{ state_store }}

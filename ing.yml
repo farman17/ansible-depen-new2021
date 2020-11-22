@@ -1,0 +1,8 @@
+- name: Install Dependences Kubernetes
+  hosts: webservers
+  remote_user: ubuntu
+  become: yes
+  become_method: sudo
+  roles:
+    - ingress 
+    - dockersock

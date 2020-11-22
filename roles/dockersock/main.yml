@@ -1,0 +1,9 @@
+- name: Set folder permissions to 0666
+  connection: local
+  command: sudo chmod 666 /var/run/docker.sock
+  become: yes
+  become_method: sudo
+  become_user: root
+
+- name: Create namespace production
+  command: kubectl create namespace production
